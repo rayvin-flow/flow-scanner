@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   flow-scanner:
+    image: rayvinflow/flow-scanner:1.x
     build:
       target: production
     command: node build/server.js

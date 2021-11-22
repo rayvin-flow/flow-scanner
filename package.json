@@ -15,9 +15,9 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "@rayvin-flow/flow-scanner-lib": "^1.0.0",
     "aws-sdk": "^2.1017.0",
     "dotenv": "^10.0.0",
-    "@rayvin-flow/flow-scanner-lib": "^1.0.0",
     "tslog": "^3.2.2"
   },
   "devDependencies": {

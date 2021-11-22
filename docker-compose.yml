@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  flow-scanner:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+      - ./nodemon.json:/home/node/app/nodemon.json
+      - ./data:/home/home/app/data
+    container_name: flow-scanner
+    command: npm run dev

@@ -1,0 +1,38 @@
+{
+  "name": "flow-scanner",
+  "version": "1.0.0",
+  "description": "Service to monitor Flow blockchain for Cadence events",
+  "main": "build/server.js",
+  "scripts": {
+    "start": "NODE_PATH=./build node build/server.js",
+    "build": "rimraf build && tsc -p .",
+    "dev": "nodemon src/server.ts"
+  },
+  "author": "https://github.com/rayvin-flow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rayvin-flow/flow-scanner"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.1017.0",
+    "dotenv": "^10.0.0",
+    "@rayvin-flow/flow-scanner-lib": "^1.0.0",
+    "tslog": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^16.11.6",
+    "nodemon": "^2.0.14",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "bin": {
+    "flow-scanner": "./bin/cli.js"
+  },
+  "files": [
+    "build/**/*",
+    "bin/**/*"
+  ]
+}

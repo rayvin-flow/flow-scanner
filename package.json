@@ -1,6 +1,6 @@
 {
   "name": "@rayvin-flow/flow-scanner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Service to monitor Flow blockchain for Cadence events",
   "main": "build/server.js",
   "scripts": {

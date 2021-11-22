@@ -1,6 +1,6 @@
 import { TLogLevelName } from 'tslog'
 import { LogType } from '../providers/ts-log-provider'
-import { FlowScannerConfig } from 'flow-scanner-lib/lib/config/flow-scanner-config'
+import { FlowScannerConfig } from '@rayvin-flow/flow-scanner-lib/lib/config/flow-scanner-config'
 
 export type DbConfig = {
   host: string

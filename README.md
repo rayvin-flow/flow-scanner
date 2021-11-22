@@ -7,7 +7,7 @@
 You can install the preconfigured standalone CLI version of `flow-scanner` from NPM:
 
 ```shell
-npm install -g flow-scanner
+npm install -g @rayvin-flow/flow-scanner
 ```
 
 Check out the [Environment Variables](#environment-variables) documentation below for configuration settings. Once your environment has been configured, you can start the scanner:
@@ -20,10 +20,15 @@ Alternatively, a Docker image is also provided:
 
 The Docker Hub repository can be found at [rayvinflow/flow-scanner](https://hub.docker.com/r/rayvinflow/flow-scanner). The current stable version uses the `1.x` tag.
 
-Launch docker image:
+Launch docker image with some default configuration values (check the [Environment Variables](#environment-variables) section for more info):
 
 ```shell
-docker run rayvinflow/flow-scanner:1.x
+docker run -e FLOW_ACCESS_NODE=https://access-mainnet-beta.onflow.org -e CADENCE_EVENT_TYPES=A.c1e4f4f4c4257510.TopShotMarketV3.MomentListed -e APP_LOG_LEVEL=debug -e APP_LOG_TYPE=pretty rayvinflow/flow-scanner:1.x
+```
+
+You can also use an `.env` file (or any other method of setting environment variables for the docker container):
+```shell
+docker run --env-file=.env rayvinflow/flow-scanner:1.x
 ```
 
 If you want to build your own docker image, you can follow the instructions below:

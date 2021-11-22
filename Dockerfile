@@ -6,10 +6,13 @@ COPY package*.json ./
 
 RUN npm i
 
-COPY . .
+COPY src/ src/
+COPY tsconfig.json .
 
 FROM base as production
 
 ENV NODE_PATH=./build
 
 RUN npm run build
+
+CMD ["node", "build/server.js"]

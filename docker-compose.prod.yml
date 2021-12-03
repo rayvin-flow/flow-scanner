@@ -4,5 +4,8 @@ services:
   flow-scanner:
     image: rayvinflow/flow-scanner:1.x
     build:
+      context: .
+      dockerfile: Dockerfile
       target: production
+    container_name: flow-scanner
     command: node build/server.js
